@@ -1,15 +1,15 @@
-/*	MASTER KEY 																													*/
-/*	MASTER CREDENTIALS 																									*/
+/*	MASTER KEY 																								*/
+/*	MASTER CREDENTIALS 																						*/
 /*	MICHAEL EDWARDS 2018-01-03 AMDG																			*/
 
-/*	MASTER SERVER USER																									*/
+/*	MASTER SERVER USER																						*/
 %let u = medwa53;
 
-/*	DEFINE CODE AND PARAMATER LOCATIONS																	*/
+/*	DEFINE CODE AND PARAMATER LOCATIONS																	    */
 %let udir = /home;
 %let pwdir = &udir./&u.;
 
-/*	MASTER PASSWORDS 																										*/
+/*	MASTER PASSWORDS 																						*/
 %include "&om_common./pw.sas";
 *%include "&pwdir./pw.sas";
 

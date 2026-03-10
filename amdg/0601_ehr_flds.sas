@@ -2,7 +2,7 @@
 /*---> EHR LENGTH STMTS <------------------------------------------*/
 /**/
 															
-%let rx_var_length 				= 	panther_id					$11 					         
+%let rx_var_length 				= 	                        panther_id			$11 					         
 															drug_name           $25          
 															ndc                 $11           
 															admin_date          4             
@@ -19,7 +19,7 @@
 *EHR RX ADMINS;
 %global rx_flds rx_from;
 %let rx_flds = select distinct 
-															rx.panther_id					
+														  rx.panther_id					
 														, rx.drug_name           
 														, rx.ndc                 
 														, rx.rxdate as admin_date          

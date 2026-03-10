@@ -1,6 +1,5 @@
  /*----------------------------------------------------------------*\
  | STANDALONE ADHOC BEVYXXA_BETRIXABAN ANALYSIS FOR BAYER - CLAIMS	|
- |  HTTP://DMO.OPTUM.COM/PRODUCTS/NHI.HTML													|
  | AUTHOR: MICHAEL EDWARDS 2018-08-03 AMDG                          |
  \*----------------------------------------------------------------*/													
 /**/
@@ -119,13 +118,13 @@ proc sort data=inp.final_bnb_mx_claims; by individual_id service_from_date claim
 
 	%let rx_com_claims = 
          select distinct
-				   	rx.nhi_individual_id														as individual_id    					
-				  , rx.nhi_claim_nbr 			  												as claim_nbr                    
+				   	rx.nhi_individual_id									as individual_id    					
+				  , rx.nhi_claim_nbr 			  							as claim_nbr                    
 				  , rx.fill_date                             				as fill_date                      
 				  , ndc.code                              					as ndc                          
 				  , rx.count_days_supply                     				as days_supply    
-				  , rx.quantity_drug_units													as quantity_drug_units                
-  				, pj.specialty_category_code 											as rx_prov_sp_code
+				  , rx.quantity_drug_units									as quantity_drug_units                
+  				, pj.specialty_category_code 								as rx_prov_sp_code
 				  , rx.amt_copay+rx.amt_deductible           				as copay_rx                     
 				  , rx.amt_paid                              				as tot_allowed_rx               
 				  , rx.specialty_phmcy                     					as specialty_ind           
@@ -134,34 +133,34 @@ proc sort data=inp.final_bnb_mx_claims; by individual_id service_from_date claim
 				  			then 'M' 
 				  		when rx.retail_phmcy	in ('Y') 
 				  			then 'R' 
-				  			else 'O' end 																as rx_location
-				  , ndc.generic_ind																	as generic_ind
+				  			else 'O' end 									as rx_location
+				  , ndc.generic_ind											as generic_ind
 				  , case when 
 				  		ndc.generic_ind = 1 
 				  			then 'G' 
-				  			else 'B'	end																as generic_desc
-				  , ndc.ahfs_therapeutic_class_desc									as ahfs_class_desc
-				  , ndc.brand_name																	as brand_name
-				  , ndc.generic_name																as generic_name
+				  			else 'B'	end									as generic_desc
+				  , ndc.ahfs_therapeutic_class_desc							as ahfs_class_desc
+				  , ndc.brand_name											as brand_name
+				  , ndc.generic_name										as generic_name
            from &nhi_view..pharmacy_claim 									rx 
-				 inner join member_coverage_month										mbr
+				 inner join member_coverage_month							mbr
     			 on rx.nhi_member_system_id=mbr.nhi_member_system_id
-				 inner join 																				ndc 																									
+				 inner join 												ndc 																									
 				 	on rx.ndc_key = ndc.ndc_key
- 		 		 left outer join provider 														pj 
+ 		 		 left outer join provider 									pj 
 					on rx.prescribing_provider_key = pj.provider_key
     		 where (ndc.brand_name like ('%BEVYXXA%') or ndc.generic_name like ('%BEVYXXA%') or ndc.brand_name like ('%BETRIXABAN%') or ndc.generic_name like ('%BETRIXABAN%') or ndc.code in ('69853020101'))
     		 	 and rx.fill_date between '2017-01-01' and '2018-07-31'; 
 
 %let rx_mcr_claims = 
        	 select distinct 
-				   	rx.nhi_individual_id														as individual_id    					
-				  , rx.nhi_claim_nbr 			  												as claim_nbr                    
+				   	rx.nhi_individual_id									as individual_id    					
+				  , rx.nhi_claim_nbr 			  							as claim_nbr                    
 				  , rx.fill_date                             				as fill_date                      
 				  , ndc.code                              					as ndc                          
 				  , rx.count_days_supply                     				as days_supply                    
-				  , rx.quantity_drug_units													as quantity_drug_units                
-  				, pj.specialty_category_code 											as rx_prov_sp_code
+				  , rx.quantity_drug_units									as quantity_drug_units                
+  				, pj.specialty_category_code 								as rx_prov_sp_code
 				  , rx.amt_copay+rx.amt_deductible           				as copay_rx                     
 				  , rx.amt_paid                              				as tot_allowed_rx               
 				  , rx.specialty_phmcy                     					as specialty_ind           
@@ -170,21 +169,21 @@ proc sort data=inp.final_bnb_mx_claims; by individual_id service_from_date claim
 				  			then 'M' 
 				  		when rx.retail_phmcy	in ('Y') 
 				  			then 'R' 
-				  			else 'O' end 																as rx_location
-				  , ndc.generic_ind																	as generic_ind
+				  			else 'O' end 									as rx_location
+				  , ndc.generic_ind											as generic_ind
 				  , case when 
 				  		ndc.generic_ind = 1 
 				  			then 'G' 
-				  			else 'B'	end																as generic_desc
-				  , ndc.ahfs_therapeutic_class_desc									as ahfs_class_desc
-				  , ndc.brand_name																	as brand_name
-				  , ndc.generic_name																as generic_name				  
-         from &nhi_view..pharmacy_claim_partd 							rx 
-				 inner join member_coverage_month_partd							mbr
+				  			else 'B'	end									as generic_desc
+				  , ndc.ahfs_therapeutic_class_desc							as ahfs_class_desc
+				  , ndc.brand_name											as brand_name
+				  , ndc.generic_name										as generic_name				  
+         from &nhi_view..pharmacy_claim_partd 								rx 
+				 inner join member_coverage_month_partd						mbr
     			 on rx.nhi_member_system_id=mbr.nhi_member_system_id
-				 inner join 																				ndc 																									
+				 inner join 												ndc 																									
 				 	on rx.ndc_key = ndc.ndc_key
- 		 		 left outer join provider 													pj 
+ 		 		 left outer join provider 									pj 
 					on rx.prescribing_provider_key = pj.provider_key
     		 where (ndc.brand_name like ('%BEVYXXA%') or ndc.brand_name like ('%BETRIXABAN%') or ndc.generic_name like ('%BEVYXXA%') or ndc.generic_name like ('%BETRIXABAN%') or ndc.code in ('69853020101'))
     		   and rx.fill_date between '2016-01-01' and '2018-07-31'; 
