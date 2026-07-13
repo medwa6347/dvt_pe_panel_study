@@ -1,0 +1,13 @@
+{
+  "_captured_at": "2026-07-13T09:04:48Z",
+  "_captured_run_id": "r_fc42add8853540848be6a6e94d0ba3b9",
+  "status": "ok",
+  "exit_code": 0,
+  "log_contains": [
+    "NOTE: Wrote proc2cat_lu (421 rows, 2 columns).",
+    "NOTE: PROC FREQ statement used.",
+    "NOTE: PROC PRINT completed: 8 observations printed, 2 variables"
+  ],
+  "log_does_not_contain": ["ERROR:", "[JENNER-ERROR"],
+  "diagnostics": {"parse_warnings": [], "runtime_warnings": []}
+}

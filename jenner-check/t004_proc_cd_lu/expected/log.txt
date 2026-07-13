@@ -1,0 +1,16 @@
+NOTE: Option OBS changed to 100.
+NOTE: DATA proc2cat_lu
+
+NOTE: Processing inline DATALINES (421 lines)
+
+NOTE: Read 421 rows from DATALINES.
+NOTE: Wrote proc2cat_lu (421 rows, 2 columns).
+NOTE: DATA elapsed:
+  wall  0.00 seconds
+  cpu   0.00 seconds
+NOTE: PROC FREQ
+NOTE: ODS plot written: freq_proc_cd_cat.spec.json
+NOTE: PROC FREQ statement used.
+NOTE: PROC PRINT data=proc2cat_lu
+
+NOTE: PROC PRINT completed: 8 observations printed, 2 variables

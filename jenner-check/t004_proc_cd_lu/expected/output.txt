@@ -1,0 +1,25 @@
+                                    00_proc_cd_lu: procedure-code category groupers                                     
+
+                                                   The FREQ Procedure
+
+proc_cd_cat              Frequency    Percent
+----------------------------------------------
+Drug/Administration             66     66.00
+Evaluation&Management           25     25.00
+Anesthesia                       5      5.00
+BloodProduct                     3      3.00
+BloodTransfusion                 1      1.00
+                                        00_proc_cd_lu: first rows of the lookup                                         
+
+proc_cd   proc_cd_cat
+00740    Anesthesia
+00810    Anesthesia
+01112    Anesthesia
+99144    Anesthesia
+99152    Anesthesia
+P9016    BloodProduct
+P9035    BloodProduct
+P9040    BloodProduct
+
+... 92 more observations (showing 8 of 100)
+

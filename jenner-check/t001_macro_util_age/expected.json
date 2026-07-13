@@ -1,0 +1,13 @@
+{
+  "_captured_at": "2026-07-13T08:59:18Z",
+  "_captured_run_id": "r_04ef7817cc6e439599b2f17dd8da2053",
+  "status": "ok",
+  "exit_code": 0,
+  "log_contains": [
+    "NOTE: Wrote members (5 rows, 3 columns).",
+    "NOTE: Wrote members_aged (5 rows, 4 columns).",
+    "NOTE: PROC PRINT completed: 5 observations printed, 4 variables"
+  ],
+  "log_does_not_contain": ["ERROR:", "[JENNER-ERROR"],
+  "diagnostics": {"parse_warnings": [], "runtime_warnings": []}
+}

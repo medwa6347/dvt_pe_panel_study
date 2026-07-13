@@ -1,0 +1,22 @@
+NOTE: Option OBS changed to 100.
+NOTE: DATA claims_mock
+
+NOTE: Processing inline DATALINES (3 lines)
+
+NOTE: Read 3 rows from DATALINES.
+NOTE: Wrote claims_mock (3 rows, 4 columns).
+NOTE: DATA elapsed:
+  wall  0.00 seconds
+  cpu   0.00 seconds
+NOTE: DATA claims_empty
+
+
+NOTE: Read 1 rows from claims_mock.
+NOTE: Wrote claims_empty (0 rows, 4 columns).
+NOTE: DATA elapsed:
+  wall  0.00 seconds
+  cpu   0.00 seconds
+NOTE: claims_mock has 4 variables and 3 observations.
+NOTE: [caller] claims_mock -> ds_exist=1 nobs=3 nvars=4 ds_empty=1
+NOTE: claims_empty has 5 variables and 0 observations.
+NOTE: [caller] claims_empty -> ds_exist=1 nobs=0 nvars=5 ds_empty=0

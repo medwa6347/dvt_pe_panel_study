@@ -1,0 +1,7 @@
+{
+  "bundle": "t001_macro_util_age",
+  "source_file": "amdg/00_macros/util_age.sas",
+  "source_blob_sha": "e457106584a636e6c0559c239c52528c78127344",
+  "source_commit": "45a646eb98d713844039358d82205d1c3c1b4c5b",
+  "notes": "util_age macro copied verbatim; small DATA-step caller with 5 mock DOB/index rows (incl. birthday-boundary and leap-day cases) exercises the exact-age-in-years math via PROC PRINT."
+}

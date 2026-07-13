@@ -1,0 +1,8 @@
+                                    fmt_reporting: study reporting groupers applied                                     
+
+      dose_grp                     cont_grp                        gaps_grp        wt_grp       age_grp      age_test  dx_grp       race_grp
+03_:900mg       03_:80% Continuous Therapy   03_:3-6 Gaps in Therapy         02_: 40-60kg  65 to 79      Over 50       PNH     CAUCASIAN
+10_:Other Dose  11_:No Continuous Therapy    01_:No Gaps in Therapy          01_: <40kg    Less than 18  Less than 50  gMG     NOT CAUCASIAN
+10_:Other Dose  01_:100% Continuous Therapy  05_:13 or More Gaps in Therapy  04_: >100kg   80+           Over 50       aHUS    NOT CAUCASIAN
+10_:Other Dose  08_:30% Continuous Therapy   02_:1-2 Gaps in Therapy         02_: 40-60kg  35 to 49      49            Other   NOT CAUCASIAN
+
