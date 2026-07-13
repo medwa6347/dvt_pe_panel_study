@@ -1,0 +1,7 @@
+{
+  "bundle": "t004_proc_cd_lu",
+  "source_file": "amdg/00_common/00_proc_cd_lu.sas",
+  "source_blob_sha": "197c7be074a5a17ec3d4106ab38f7dafe59a8bec",
+  "source_commit": "45a646eb98d713844039358d82205d1c3c1b4c5b",
+  "notes": "DATA step + full CARDS payload copied from 00_proc_cd_lu.sas; only target library rewritten (inp.r&vz._proc2cat_lu -> work.proc2cat_lu). SCAN/TRANWRD parsing unchanged; PROC FREQ summarises the proc-code category groupers."
+}

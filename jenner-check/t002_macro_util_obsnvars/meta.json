@@ -1,0 +1,7 @@
+{
+  "bundle": "t002_macro_util_obsnvars",
+  "source_file": "amdg/00_macros/util_obsnvars.sas",
+  "source_blob_sha": "8c3e1d50da367d2fbe1502b074f9fad7831d5f00",
+  "source_commit": "45a646eb98d713844039358d82205d1c3c1b4c5b",
+  "notes": "util_obsnvars macro copied verbatim; two callers exercise the OPEN/ATTRN/CLOSE path against a populated mock claims table and an empty analog, surfacing the global macro vars it sets."
+}

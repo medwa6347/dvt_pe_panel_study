@@ -1,0 +1,13 @@
+{
+  "_captured_at": "2026-07-13T09:02:33Z",
+  "_captured_run_id": "r_2f3b8aabdcec4daf950e4910d10f951e",
+  "status": "ok",
+  "exit_code": 0,
+  "log_contains": [
+    "NOTE: Wrote claims_mock (3 rows, 4 columns).",
+    "NOTE: claims_mock has 4 variables and 3 observations.",
+    "NOTE: [caller] claims_mock -> ds_exist=1 nobs=3 nvars=4"
+  ],
+  "log_does_not_contain": ["ERROR:", "[JENNER-ERROR"],
+  "diagnostics": {"parse_warnings": [], "runtime_warnings": []}
+}

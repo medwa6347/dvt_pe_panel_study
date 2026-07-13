@@ -1,0 +1,7 @@
+{
+  "bundle": "t003_fmt_reporting",
+  "source_file": "amdg/00_formats/fmt_reporting.sas",
+  "source_blob_sha": "a08d38f4e39c9f0e27d0f97348a2e4d82b7637b2",
+  "source_commit": "45a646eb98d713844039358d82205d1c3c1b4c5b",
+  "notes": "PROC FORMAT value statements (dose/cont_pct/total_gaps/pt_wt/dx/age/age_test/race groupers) copied verbatim from fmt_reporting.sas; a DATA step applies them via PUT() over boundary and unmapped rows through PROC PRINT."
+}
